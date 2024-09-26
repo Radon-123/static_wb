@@ -1,0 +1,526 @@
+<!Doctype HTML>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<HTML>
+
+<head>
+    <meta charset="utf-8/" name="viewport" content="width=device-width, initial-scale=1">
+    <title> Bun Tech Inc. - New Products </title>
+    <style>
+
+
+        /* Defining style type for background:
+        
+        Background Color is an offwhite
+        
+        */
+        body 
+        {
+           background-color: #f2f2f2;
+           margin:0;
+           padding: 0;
+        }
+       /* Defining css for a custom nav bar 
+        Background Color is blue
+        2 pixle thick boarded in red
+        height of the nav bar is 100 px
+       */
+        .Custom_Nav
+        {    
+            background-color: blue;
+            border: 2px outset red;
+            height: 100px;
+            width: 100%;
+           position: fixed;
+           top: 0;
+           margin:0;
+           padding: 0;
+           z-index: 1;
+        }
+        
+        /*Defining the <a> tag for the custom nav 
+            Wanting the text to float left
+            font size is 32px
+            text color is white
+            the text wil be aligned in the center of addition to the nav bar
+            padding 28x32 px as a buffer around each element: prevents elements from grouping close
+            disabling text decoration to remove the underline thing
+
+        */
+        
+        .Custom_Nav a
+        {
+            float: left;
+            font-size: 32px;
+            color: white;
+            text-align: center;
+            padding: 28px 32px;
+            text-decoration: none;
+        }
+        
+       
+        /* Defing a dropbox element
+        We want the drop box to float left just like the other additions to the nav bar
+        */
+        .dropbox
+        {
+            float: left;
+            
+        }
+
+        /*Defining the button for the drop box
+        The box will have 32px font size
+        The box has no boarder or outline (to blend in with the nav bar)
+        The text is white
+        The box has identical padding to other elements in nav bar
+        background color is whatever the nav bar is
+        */
+        .dropbox .button
+        {
+            font-size: 32px;  
+            border: none;
+            outline: none;
+            color: white;
+            padding: 28px 32px;
+            font-style: inherit;
+            background-color: inherit;
+            /*margin: 0;*/
+        }
+       
+        /* Defining How the actual drop down menu behaves 
+        Toggling the drop down to only occur when hovered over
+        Making the position absolute so it does not push around other elements on the webpage
+        background color matchest the site color
+
+        */
+        .drop_cont
+        {  
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            /*min-width: 320px;*/
+            box-shadow: 0px 32px 32px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .drop_cont a
+        {
+            float: none;
+            color: black;
+            padding: 28px 32px;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+       .dropbox:hover .drop_cont{ 
+        
+        display: block;
+        margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+
+
+        .split {
+                /*height: 100%;*/
+                height: 800px;
+                width: 50%;
+                position: absolute;
+                z-index: 0;
+                top: 100;
+                overflow-x: auto;
+                padding-top: 20px;
+                
+                }
+
+/* Control the left side */
+.left {
+  left: 0;
+  background-color: #f2f2f2;
+ 
+  
+}
+
+/* Control the right side */
+.right {
+  right: 0;
+  background-color:#f2f2f2;
+  border-left: black 2px outset;
+ 
+}
+
+/* If you want the content centered horizontally and vertically */
+.centered {
+  position: relative;
+  /*top: 50%;*/
+  top:300px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* Style the image inside the centered container, if needed */
+
+
+
+
+
+
+
+
+
+
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: blue;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+
+
+
+
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 2.5em;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+
+
+
+
+
+
+    </style>
+
+
+</head>
+
+<body="">
+   
+<section>    
+    <div class="Custom_Nav">   
+        <a href="index.html">Home</a>
+        <div class="dropbox">
+            <button class="button">New Innovations  </button> 
+                <div class="drop_cont" style="min-width: 320px;"   >
+                    <a href="Epsilion3.html"> The Epsilon 3</a>
+                </div>
+            </div>
+           
+            <div class="dropbox">
+                <button class="button">Customer Service </button> 
+                    <div class="drop_cont" style="min-width: 320px;">
+                        <a>Hot Line</a>
+                        <a>Reviews</a>
+                    </div>
+                </div>
+
+           
+                <div class="dropbox">
+                    <button class="button" >About Bun Tech </button> 
+                        <div class="drop_cont" style="min-width: 290px;">
+                            <a> Our Mission</a>
+                            <a> Facilities</a>
+                        </div>
+                    </div>
+        <div class="dropbox" >
+        <button class="button">Employees  </button> 
+            <div class="drop_cont" style="min-width: 220px;">
+                <a> Log In</a>
+                <a> FAQ</a>
+            </div>
+        </div>
+       
+
+        
+        
+      
+
+    </div>
+
+    
+    
+</section>
+
+<section style="height: 100px;"></section> 
+
+
+<h1 style ="text-align: center;font-size: 5em;color: blue;"> Bun Tech's Proudest New Release to date: The Epsilion 3!   </h1>
+
+<div class="slideshow-container" style="height: 700px;">
+
+    <div class="mySlides fade">
+      <div class="numbertext">1 / 3</div>
+      <img src="../images/Edited_Coffee.png" style="width: 100%;height: 100%;">
+     
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">2 / 3</div>
+      <img src="../images/2.png" style="width:100%;height: 100%;">
+     
+    </div>
+    
+    <div class="mySlides fade">
+      <div class="numbertext">3 / 3</div>
+      <img src="../images/cancer.png" style="width:100%;height: 500px;">
+      
+    </div>
+    
+    </div>
+    <br>
+    
+    <div style="text-align:center">
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+      <span class="dot"></span> 
+    </div>
+<br>
+<br>
+<br>
+<br>
+<p>
+<section>
+<h1 style="text-align: center;font-size: 3em;color: blue;">  The Epsilion 3:  </h1>
+<h2 style="font-size: 2em;color:black;text-align: center;">    
+Tierd of the unpredictable rush of caffine traditional coffee has to offer? Try Bun Tech's Epsilion 3 specialty roast. Our Genetisits, under the guide of nature, spliced togeather 
+the traditional coffee bean with green tea leafs to bring customers a unique brewing experience. This new strand of Cofee has concentrations of L-theanine and epigallocatechin gallate similar to a regular cup of green tea while retaining the wonderful taste one would expect from Bun Tech Coffee. 
+
+</h2>
+</p>    
+<br>
+
+
+
+
+
+</section>
+
+<div class="split left">
+    <div class="centered">
+        <h2 style="font-size: 2.5em;color: blue;">L-theanine</h2>
+      <img src="../images/Theanine.png" style="height: 200px;width: 350px;">
+      
+      <p style="font-size: 2em;margin-left: 5px; margin-right: 5px;">Since the dawn of civilization, early humans have ingested L-theanine to help improve cognitive function and improved mood. This compound is commonly
+            found in green tea, where it is known to help integrate caffine into the human body. This ammino acid faccilitates the smooth breakdown of the caffine molecules such that 
+            consuming it makes the user feel more energized and focused. Our Genetisits took special care to splice the perfect amount of this ammino acid into the Epsilion 3 coffe strand
+            such that every cup of our delicious roast will leave you feeling empowered to take on your day.
+      </p>
+    </div>
+  </div>
+  
+  <div class="split right">
+    <div class="centered">
+      <h2 style="font-size: 2.5em;color: blue;">epigallocatechin gallate</h2>
+      <img src="../images/cancer.png" style="height: 200px;width: 350px;">
+      <p style="font-size: 2em;">The epsilion 3 roast is specially formulated to take on both the functional and medicine properties of green tea. While splicing togeather the two genomes,
+        special care was taken to make sure a large concentraion epigallocatechin gallate ended up in your brew. This polyphenol is specifically known to reduce inflamation and help prevent cancer.
+        The epsilion 3 roast is not only a roast specialized to optimize your energy for the day, but also aids your immune systems fight against cancer.
+    </p>
+    </div>
+  </div>
+
+
+<section style="height: 700px;"></section> 
+<section>
+    <h1 style="text-align: center;font-size: 2.5em;color: blue;">Pricing:</h1>
+    <div class="tab">
+        
+        <button class="tablinks" onclick="openCity(event, 'sm')">Small</button>
+        <button class="tablinks" onclick="openCity(event, 'med')">Medium</button>
+        <button class="tablinks" onclick="openCity(event, 'lar')">Large</button>
+        <button class="tablinks" onclick="openCity(event, 'sub')">Subscription</button>
+      </div>
+      
+      <div id="sm" class="tabcontent">
+        <div class="split left" style="height: 500px;">
+            <div class="centered">
+               
+              
+              
+              <p style="font-size: 2em;margin-left: 5px; margin-right: 5px;">Weight: 150g (15 Brews)</p>
+              <p style="font-size: 2em;margin-left: 5px; margin-right: 5px;">Size: 8x4x4in </p>
+              <p style="font-size: 2em;margin-left: 5px; margin-right: 5px;">Price: 14.99$ </p>
+            </div>
+          </div>
+          
+          <div class="split right" style="border-left: 0;height: 700px;">
+            <div class="centered">
+              
+              <img src="../images/beans.jpg" style="height:100% ;width: 100%;">
+              
+            </div>
+          </div>
+      </div>
+      
+      <div id="med" class="tabcontent">
+        <h3>Paris</h3>
+        <p>Paris is the capital of France.</p> 
+      </div>
+      
+      <div id="lar" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+      <div id="sub" class="tabcontent">
+        <h3>Tokyo</h3>
+        <p>Tokyo is the capital of Japan.</p>
+      </div>
+
+
+
+</section>
+
+<script>
+    let slideIndex = 0;
+    showSlides();
+    
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {slideIndex = 1}    
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+      setTimeout(showSlides, 5000); // Change image every 2 seconds
+    }
+
+    function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+    </script>
+</body>
+
+
+</HTML>
