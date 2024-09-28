@@ -6,13 +6,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
-  <link rel="stylesheet" href="login-page.css">
-  <script defer src="login-page.js"></script>
+  <link rel="stylesheet" href="utilities/login-page.css">
+  <link rel="stylesheet" href="utilities/my_style.css">
+  <script src="utilities/head.js" type="text/javascript" defer></script>
+  <script defer src="utilities/login-page.js"></script>
 </head>
 
 <body>
+  <header-component></header-component>
+
   <main id="main-holder">
-    <h1 id="login-header">Login</h1>
+    <h1 id="login-header">Employee Login</h1>
     
     <div id="login-error-msg-holder">
       <p id="login-error-msg">Invalid username <span id="error-msg-second-line">and/or password</span></p>
@@ -28,4 +32,3 @@
 </body>
 
 </html>
-view rawlogin-page.html hosted with ❤ by GitHub
