@@ -8,9 +8,9 @@ loginButton.addEventListener("click", (e) => {
     const username = loginForm.username.value;
     const password = loginForm.password.value;
 
-    if (username === "user" && password === "web_dev") {
+    if (username === "Morris" && password === "Del Vecchios") {
         alert("You have successfully logged in.");
-        window.location.href = "Epsilion3.html";
+        window.location.href = "Thank_You.html";
         //location.reload();
     } else {
         
