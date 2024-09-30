@@ -23,19 +23,12 @@ class Header extends HTMLElement {
             <div class="dropbox">
                 <button class="button">Customer Service </button> 
                     <div class="drop_cont" style="min-width: 320px;">
-                        <a>Hot Line</a>
-                        <a>Reviews</a>
+                        <a href="Support.html">Submit Ticket</a>
                     </div>
                 </div>
 
            
-                <div class="dropbox">
-                    <button class="button" >About Bun Tech </button> 
-                        <div class="drop_cont" style="min-width: 290px;">
-                            <a> Our Mission</a>
-                            <a> Facilities</a>
-                        </div>
-                    </div>
+               
         <div class="dropbox" >
         <button class="button">Employees  </button> 
             <div class="drop_cont" style="min-width: 220px;">
